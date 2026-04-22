@@ -1,0 +1,77 @@
+#   
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+<meta charset="UTF-8">  
+<title>Carta para ti ❤️</title>  
+<style>  
+    body {  
+        background: #fbe7e7;  
+        display: flex;  
+        justify-content: center;  
+        align-items: center;  
+        height: 100vh;  
+        font-family: Arial, sans-serif;  
+    }  
+  
+    .sobre {  
+        width: 300px;  
+        height: 200px;  
+        background: #ff4d6d;  
+        position: relative;  
+        cursor: pointer;  
+        border-radius: 10px;  
+    }  
+  
+    .tapa {  
+        position: absolute;  
+        width: 100%;  
+        height: 100%;  
+        background: #ff758f;  
+        clip-path: polygon(0 0, 50% 50%, 100% 0);  
+        transition: 0.5s;  
+    }  
+  
+    .carta {  
+        position: absolute;  
+        width: 90%;  
+        height: 90%;  
+        background: white;  
+        top: 5%;  
+        left: 5%;  
+        border-radius: 10px;  
+        display: flex;  
+        justify-content: center;  
+        align-items: center;  
+        text-align: center;  
+        padding: 15px;  
+        transform: scale(0);  
+        transition: 0.5s;  
+    }  
+  
+    .sobre.abierto .tapa {  
+        transform: rotateX(180deg);  
+    }  
+  
+    .sobre.abierto .carta {  
+        transform: scale(1);  
+    }  
+</style>  
+</head>  
+<body>  
+  
+<div class="sobre" onclick="abrirCarta(this)">  
+    <div class="tapa"></div>  
+    <div class="carta">  
+        <h2>Feliz aniversario mi amor❤️</h2>  
+    </div>  
+</div>  
+  
+<script>  
+function abrirCarta(elemento) {  
+    elemento.classList.toggle("abierto");  
+}  
+</script>  
+  
+</body>  
+</html>  
